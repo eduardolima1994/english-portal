@@ -35,6 +35,10 @@
 	<tr>
 		<th>Id</th>
 		<th>Name</th>
+		<th>Email</th>
+		<th>Level</th>
+		<th>Active</th>
+		<th>Register</th>
 		<th>Alterar</th>
     <th>Deletar</th>
 	</tr>
@@ -51,6 +55,22 @@
 	<tr>
 		<td><?=$linha['id']?></td>
 		<td><?=$linha['user']?></td>
+		<td><?=$linha['email']?></td>
+		<td><?php
+      if($linha['level'] == 1){
+        echo 'STUDENT';
+      }else{
+        echo 'ADMIN';
+      }
+    ?></td>
+		<td><?php
+      if($linha['active'] == 1){
+        echo 'ACTIVE';
+      }else{
+        echo 'DEACTIVE';
+      }
+    ?></td>
+		<td><?=$linha['register']?></td>
 		<td>[X]</td>
 		<td>[X]</td>
 	</tr>	
