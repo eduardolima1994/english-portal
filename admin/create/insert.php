@@ -29,7 +29,7 @@
   $sql = "INSERT INTO `users` VALUES (NULL, '$name', '$user', SHA1('$password'), '$email', $level, 1, NOW(), NOW());";
   if (mysqli_query($conn, $sql)) {
         echo "<script>alert('New user created successfully');</script>";
-        header("Location: ../auth/restrito.php"); exit;
+        header("Location: ../auth/restricted.php"); exit;
   } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
