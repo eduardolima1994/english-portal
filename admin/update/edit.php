@@ -27,7 +27,7 @@
   
   echo "Connected successfully";
   
-  $sql = "UPDATE `users` SET `name` = '$name', `user` = '$user', `password` = SHA1('$password'), `email` = '$email', `level` = $level WHERE `id` = $id;";
+  $sql = "UPDATE `users` SET `name` = '$name', `user` = '$user', `password` = SHA1('$password'), `email` = '$email', `level` = $level, `update` = NOW() WHERE `id` = $id;";
   if (mysqli_query($conn, $sql)) {
         echo "<script>alert('New user created successfully');</script>";
         header("Location: ../auth/restrito.php"); exit;

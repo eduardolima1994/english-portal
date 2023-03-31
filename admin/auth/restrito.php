@@ -33,6 +33,7 @@
 		<th>Level</th>
 		<th>Active</th>
 		<th>Register</th>
+		<th>Update</th>
 		<th>Alter</th>
     <th>Delete</th>
 	</tr>
@@ -63,6 +64,7 @@
       }
     ?></td>
 		<td><?=$linha['register']?></td>
+		<td><?=$linha['update']?></td>
 		<td><a href="../update/update.php?id=<?=$linha['id']?>">[Alter]</a></td>
 		<td><?php
       if($linha['level'] == 2){
