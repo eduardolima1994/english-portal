@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <form action="auth/validacao.php" method="post">
+  <form action="auth/validation.php" method="post">
   <fieldset>
   <legend>Admin Login</legend>
       <label for="txUsuario">User</label>
