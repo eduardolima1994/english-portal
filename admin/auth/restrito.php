@@ -63,13 +63,13 @@
       }
     ?></td>
 		<td><?=$linha['register']?></td>
-		<td><a href="#">[Alter]</a></td>
+		<td><a href="../update/update.php?id=<?=$linha['id']?>">[Alter]</a></td>
 		<td><?php
       if($linha['level'] == 2){
         echo '-';
       }else{
         ?>
-        <a href="../delete/delete.php?id=<?=$linha['id']?>" onclick="return confirm('Do you really want to delete the student?');">Delete</a>
+        <a href="../delete/delete.php?id=<?=$linha['id']?>" onclick="return confirm('Do you really want to delete the student?');">[Delete]</a>
       <?php
       }
     ?></td>
