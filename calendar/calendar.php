@@ -9,7 +9,7 @@
   <link href="../css/style.css" rel="stylesheet">
   <link href="../css/darkMode.css" rel="stylesheet">
 
-  <title>Calendario</title>
+  <title>Calendar</title>
 </head>
   <!-- dark mode -->
   
@@ -26,20 +26,20 @@
         <div id="monthDisplay"></div>
 
         <div>
-          <button id="backButton">Voltar</button>
-          <button id="nextButton">Próximo</button>
+          <button id="backButton">Back</button>
+          <button id="nextButton">Next</button>
         </div>
           
       </div>
 
       <div id="weekdays">
-        <div>Domingo</div>
-        <div>Segunda-feira</div>
-        <div>Terça-feira</div>
-        <div>Quarta-feira</div>
-        <div>Quinta-feira</div>
-        <div>Sexta-feira</div>
-        <div>Sábado</div>
+        <div>Sunday</div>
+        <div>Monday</div>
+        <div>Tuesday</div>
+        <div>Wednesday</div>
+        <div>Thursday</div>
+        <div>Friday</div>
+        <div>Saturday</div>
       </div>
 
 
@@ -50,22 +50,22 @@
   </div>
 
   <div id="newEventModal">
-    <h2>New Evente</h2>
+    <h2>New Event</h2>
 
     <input id="eventTitleInput" placeholder="Event Title"/>
 
-    <button id="saveButton"> Salvar</button>
-    <button id="cancelButton">Cancelar</button>
+    <button id="saveButton"> Save</button>
+    <button id="cancelButton">Cancel</button>
   </div>
 
   <div id="deleteEventModal">
-    <h2>Evento</h2>
+    <h2>Event</h2>
 
     <div id="eventText"></div><br>
 
 
-    <button id="deleteButton">Deletar</button>
-    <button id="closeButton">Fechar</button>
+    <button id="deleteButton">Delete</button>
+    <button id="closeButton">Close</button>
   </div>
 
   <div id="modalBackDrop"></div>
