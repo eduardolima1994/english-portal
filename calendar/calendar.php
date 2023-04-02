@@ -5,20 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- arquivos style -->
   <link href="../css/style.css" rel="stylesheet">
   <link href="../css/darkMode.css" rel="stylesheet">
 
   <title>Calendar</title>
 </head>
-  <!-- dark mode -->
   
   <div class="toggle">
     <input id="switch" type="checkbox" name="theme">
     <label for="switch">Toggle</label>
   </div>
-
-<!-- -------- -->
 
 <body>
   <div id="container">
@@ -42,10 +38,7 @@
         <div>Saturday</div>
       </div>
 
-
-      <!-- div dinamic -->
       <div id="calendar" ></div>
-
    
   </div>
 
