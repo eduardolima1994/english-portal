@@ -61,7 +61,7 @@
     ?></td>
 		<td><?=$linha['register']?></td>
 		<td><?=$linha['update']?></td>
-    <td><a href="../../calendar/calendar.php?id=<?=$linha['id']?>">[Calendar]</a></td>
+    <td><a href="../calendar/index.php?id=<?=$linha['id']?>">[Calendar]</a></td>
 		<td><a href="../update/update.php?id=<?=$linha['id']?>">[Alter]</a></td>
 		<td><?php
       if($linha['level'] == 2){
