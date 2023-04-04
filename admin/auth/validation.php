@@ -25,7 +25,7 @@
       $_SESSION['UsuarioNome'] = $resultado['name'];
       $_SESSION['UsuarioNivel'] = $resultado['level'];
 
-      header("Location: restricted.php"); exit;
+      header("Location: ../restricted"); exit;
   }
 
 ?>

@@ -18,7 +18,7 @@
   $sql = "DELETE FROM `users` WHERE id=$id";
 
   if ($conn->query($sql) === TRUE) {
-      header("Location: ../auth/restricted.php"); exit;
+      header("Location: ../restricted"); exit;
   } else {
       echo "Error deleting record: " . $conn->error;
   }

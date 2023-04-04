@@ -82,7 +82,7 @@
     
 </head>
 <body>    
-    <a href="../auth/restricted.php">Voltar</a>
+    <a href="../restricted">Voltar</a>
     <div id='calendario'>
         <br/>
         <form id="novo_evento" action="" method="post">
