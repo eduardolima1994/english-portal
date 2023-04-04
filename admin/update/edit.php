@@ -25,7 +25,7 @@
   $sql = "UPDATE `users` SET `name` = '$name', `user` = '$user', `password` = SHA1('$password'), `email` = '$email', `level` = $level, `update` = NOW() WHERE `id` = $id;";
   if (mysqli_query($conn, $sql)) {
         echo "<script>alert('New user created successfully');</script>";
-        header("Location: ../auth/restricted.php"); exit;
+        header("Location: ../restricted"); exit;
   } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
