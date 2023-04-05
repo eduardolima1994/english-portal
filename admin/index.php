@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="restricted/vendors/ti-icons/css/themify-icons.css">
   <link rel="stylesheet" href="restricted/vendors/css/vendor.bundle.base.css">
   <link rel="stylesheet" href="restricted/css/vertical-layout-light/style.css">
-  <!-- endinject -->
   <link rel="shortcut icon" href="restricted/images/favicon.ico" />
 </head>
 
@@ -45,11 +44,6 @@
                   <a href="#" class="auth-link text-black">Forgot password?</a>
                 </div>
                 <div class="mb-2">
-                  <!--
-                  <button type="button" class="btn btn-block btn-facebook auth-form-btn">
-                    <i class="ti-facebook mr-2"></i>Connect using facebook
-                  </button>
-                  -->
                 </div>
                 <div class="text-center mt-4 font-weight-light">
                   Don't have an account? <a href="#" class="text-primary">Create</a>
@@ -59,23 +53,15 @@
           </div>
         </div>
       </div>
-      <!-- content-wrapper ends -->
     </div>
-    <!-- page-body-wrapper ends -->
   </div>
-  <!-- container-scroller -->
-  <!-- plugins:js -->
   <script src="../../vendors/js/vendor.bundle.base.js"></script>
-  <!-- endinject -->
-  <!-- Plugin js for this page -->
-  <!-- End plugin js for this page -->
-  <!-- inject:js -->
   <script src="../../js/off-canvas.js"></script>
   <script src="../../js/hoverable-collapse.js"></script>
   <script src="../../js/template.js"></script>
   <script src="../../js/settings.js"></script>
   <script src="../../js/todolist.js"></script>
-  <!-- endinject -->
+  
 </body>
 
 </html>
