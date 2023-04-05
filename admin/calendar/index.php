@@ -9,12 +9,19 @@
 <head>
     <meta charset="utf-8">
     <meta lang="pt-BR">
-    <title> Calendário Dinâmico com PHP + FullCalendar </title>
+    <title>English Portal - Admin Area</title>
     
     <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
     <script src='fullcalendar/lib/jquery.min.js'></script>
     <script src='fullcalendar/lib/moment.min.js'></script>
     <script src='fullcalendar/fullcalendar.js'></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../restricted/vendors/feather/feather.css">
+    <link rel="stylesheet" href="../restricted/vendors/ti-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../restricted/vendors/css/vendor.bundle.base.css">
+    <link rel="stylesheet" href="../restricted/css/vertical-layout-light/style.css">
+    <link rel="shortcut icon" href="../restricted/images/favicon.ico" />
     
     <!-- script de tradução -->
     <script src='fullcalendar/lang/en-ca.js'></script>
@@ -44,7 +51,7 @@
                 editable: true,
                 eventLimit: true, 
                 events: 'eventos.php',           
-                eventColor: '#dd6777'
+                eventColor: '#c60b1e'
             });	
             
             //CADASTRA NOVO EVENTO
