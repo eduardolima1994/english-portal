@@ -13,19 +13,19 @@
 
   if (mysqli_num_rows($query) != 1) {
 
-      echo "Login inválido!"; exit;
+    echo "<script>alert('Invalid login!'); window.location.replace('../');</script>"; exit;
 
-    } else {
+  } else {
 
-      $resultado = mysqli_fetch_assoc($query);
+    $resultado = mysqli_fetch_assoc($query);
 
-      if (!isset($_SESSION)) session_start();
+    if (!isset($_SESSION)) session_start();
 
-      $_SESSION['UsuarioID'] = $resultado['id'];
-      $_SESSION['UsuarioNome'] = $resultado['name'];
-      $_SESSION['UsuarioNivel'] = $resultado['level'];
+    $_SESSION['UsuarioID'] = $resultado['id'];
+    $_SESSION['UsuarioNome'] = $resultado['name'];
+    $_SESSION['UsuarioNivel'] = $resultado['level'];
 
-      header("Location: ../restricted"); exit;
+    header("Location: ../restricted"); exit;
   }
 
 ?>
