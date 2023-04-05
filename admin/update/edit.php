@@ -5,7 +5,7 @@
   $id = $_REQUEST['id'];
   $name = $_POST["name"];
   $user = $_POST["user"];
-  $password = $_POST["password"];
+  $pass = $_POST["password"];
   $email = $_POST["email"];
   $level = $_POST["level"];
 
@@ -22,7 +22,7 @@
   
   echo "Connected successfully";
   
-  $sql = "UPDATE `users` SET `name` = '$name', `user` = '$user', `password` = SHA1('$password'), `email` = '$email', `level` = $level, `update` = NOW() WHERE `id` = $id;";
+  $sql = "UPDATE `users` SET `name` = '$name', `user` = '$user', `password` = SHA1('$pass'), `email` = '$email', `level` = $level, `update` = NOW() WHERE `id` = $id;";
   if (mysqli_query($conn, $sql)) {
         echo "<script>alert('New user created successfully');</script>";
         header("Location: ../restricted"); exit;

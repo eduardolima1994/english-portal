@@ -4,7 +4,7 @@
 
   $name = $_POST["name"];
   $user = $_POST["user"];
-  $password = $_POST["password"];
+  $pass = $_POST["password"];
   $email = $_POST["email"];
   $level = $_POST["level"];
 
@@ -21,7 +21,8 @@
   
   echo "Connected successfully";
   
-  $sql = "INSERT INTO `users` VALUES (NULL, '$name', '$user', SHA1('$password'), '$email', $level, 1, NOW(), NOW());";
+  $sql = "INSERT INTO `users` VALUES (NULL, '$name', '$user', SHA1('$pass'), '$email', '$level', 1, NOW( ), NOW( ));";
+
   if (mysqli_query($conn, $sql)) {
         echo "<script>alert('New user created successfully');</script>";
         header("Location: ../restricted"); exit;
