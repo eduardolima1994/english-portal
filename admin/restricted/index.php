@@ -493,7 +493,7 @@
                             </td>
                             <td><?php
                               if($linha['level'] == 2){
-                                echo '-';
+                                echo 'Unavailable';
                               }else{
                                 ?>
                                 <a href="../delete/delete.php?id=<?=$linha['id']?>" onclick="return confirm('Do you really want to delete the student?');">
