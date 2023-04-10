@@ -1,15 +1,9 @@
 <?php
 
   require('../auth/session.php');
-
-  $servername = "localhost";
-  $username = "root";
-  $password = "root";
-  $dbname = "english-portal";
+  require('../auth/connection.php');
 
   $id = $_REQUEST['id'];
-
-  $conn = new mysqli($servername, $username, $password, $dbname);
 
   if ($conn->connect_error) {
       die("Connection failed: " . $conn->connect_error);

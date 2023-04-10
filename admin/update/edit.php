@@ -1,6 +1,7 @@
 <?php
 
   require('../auth/session.php');
+  require('../auth/connection.php');
 
   $id = $_REQUEST['id'];
   $name = $_POST["name"];
@@ -8,13 +9,6 @@
   $pass = $_POST["password"];
   $email = $_POST["email"];
   $level = $_POST["level"];
-
-  $servername = "localhost";
-  $database = "english-portal";
-  $username = "root";
-  $password = "root";
-
-  $conn = mysqli_connect($servername, $username, $password, $database);
 
   if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
