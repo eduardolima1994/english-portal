@@ -1,6 +1,7 @@
 <?php
 
   require('../auth/session.php');
+  require('../temperature/temperature.php');
 
 ?>
 
@@ -378,11 +379,11 @@
                   <div class="weather-info">
                     <div class="d-flex">
                       <div>
-                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i>31<sup>C</sup></h2>
+                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i><?=$temp?><sup>C</sup></h2>
                       </div>
                       <div class="ml-2">
-                        <h4 class="location font-weight-normal">Aracaju</h4>
-                        <h6 class="font-weight-normal">Brazil</h6>
+                        <h4 class="location font-weight-normal"><?=$cityName?></h4>
+                        <h6 class="font-weight-normal"><?=$country?></h6>
                       </div>
                     </div>
                   </div>
