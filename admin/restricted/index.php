@@ -20,6 +20,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>English Portal - Admin Area - Welcome <?php echo $_SESSION['UsuarioNome']; ?>!</title>
+  
+  
+  
+  
+  <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+  
+  
+  
+  
+  
   <!-- plugins:css -->
   <link rel="stylesheet" href="vendors/feather/feather.css">
   <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
@@ -379,11 +389,53 @@
                   <div class="weather-info">
                     <div class="d-flex">
                       <div>
-                        <h2 class="mb-0 font-weight-normal"><i class="icon-sun mr-2"></i><?=$temp?><sup>C</sup></h2>
+                        <h2 class="mb-0 font-weight-normal">
+                          <?php 
+                            if($weather == 'Clear'){
+                              echo '<i class="mdi mdi-weather-sunny"></i>';
+                            }
+                            else if($weather == 'Clouds'){
+                              echo '<i class="mdi mdi-weather-cloudy"></i>';
+                            }
+                            else if($weather == 'Rain'){
+                              echo '<i class="mdi mdi-weather-pouring"></i>';
+                            }
+                            else if($weather == 'Thunderstorm'){
+                              echo '<i class="mdi mdi-weather-lightning"></i>';
+                            }
+                            else if($weather == 'Drizzle'){
+                              echo '<i class="mdi mdi-weather-hail"></i>';
+                            }
+                            else if($weather == 'Snow'){
+                              echo '<i class="mdi mdi-weather-snowy"></i>';
+                            }
+                            else if($weather == 'Mist'){
+                              echo '<i class="mdi mdi-weather-windy-variant"></i>';
+                            }
+                            else if($weather == 'Haze'){
+                              echo '<i class="mdi mdi-weather-windy-variant"></i>';
+                            }
+                            else if($weather == 'Smoke'){
+                              echo '<i class="mdi mdi-weather-cloudy"></i>';
+                            }
+                            else if($weather == 'Squall'){
+                              echo '<i class="mdi mdi-weather-windy"></i>';
+                            }
+                            else if($weather == 'Tornado'){
+                              echo '<i class="mdi mdi-weather-lightning"></i>';
+                            }
+                            else{
+                              echo '<i class="mdi mdi-weather-sunny"></i>';
+                            }
+                          ?>
+                          
+                          <?=$temp?><sup>C</sup>
+                        </h2>
                       </div>
                       <div class="ml-2">
                         <h4 class="location font-weight-normal"><?=$cityName?></h4>
                         <h6 class="font-weight-normal"><?=$country?></h6>
+                        <!-- <h6 class="font-weight-normal"><?=$weather?></h6> -->
                       </div>
                     </div>
                   </div>
