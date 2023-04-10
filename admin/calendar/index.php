@@ -50,21 +50,21 @@
                 defaultDate: getCurrentDate(),
                 editable: true,
                 eventLimit: true, 
-                events: 'eventos.php',           
+                events: 'events.php',           
                 eventColor: '#c60b1e'
             });	
             
             //CADASTRA NOVO EVENTO
             $('#novo_evento').submit(function(){
                 //serialize() junta todos os dados do form e deixa pronto pra ser enviado pelo ajax
-                var dados = jQuery(this).serialize();
+                var datas = jQuery(this).serialize();
                 $.ajax({
                     type: "POST",
-                    url: "cadastrarEvento.php?id=<?= $id?>",
-                    data: dados,
-                    success: function(data)
+                    url: "registerEvent.php?id=<?= $id?>",
+                    data: datas,
+                    success: function(date)
                     {   
-                        if(data == "1"){
+                        if(date == "1"){
                             alert("Successfully registered! ");
                             //atualiza a página!
                             location.reload();
@@ -93,8 +93,8 @@
     <div id='calendario'>
         <br/>
         <form id="novo_evento" action="" method="post">
-            Name event: <input type="text" name="nome" required/><br/><br/>  
-            Date event: <input type="datetime-local" name="data" required/><br/><br/>       
+            Name event: <input type="text" name="name" required/><br/><br/>  
+            Date event: <input type="datetime-local" name="date" required/><br/><br/>       
             <button type="submit"> Create new event </button>
         </form>
     </div>
