@@ -1,5 +1,7 @@
 <?php
 
+  require('../auth/session.php');
+
   $geolocation = json_decode(file_get_contents('http://ip-api.com/json/'));
   $latitude = $geolocation->lat;
   $longitude = $geolocation->lon;
@@ -12,7 +14,7 @@
   if (isset($data1->name)) {
     $cityName = $data1->name;
   } else {
-    echo "Não foi possível obter informações sobre sua cidade atual.";
+    echo "It was not possible to obtain information about your current city.";
   }
 
   $response = file_get_contents("https://api.openweathermap.org/data/2.5/weather?q={$cityName}&appid={$apiKey}");
