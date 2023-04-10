@@ -17,6 +17,7 @@
 
   $response = file_get_contents("https://api.openweathermap.org/data/2.5/weather?q={$cityName}&appid={$apiKey}");
   $data2 = json_decode($response);
+  $weather = $data2->weather[0]->main;
   $temp = intval($data2->main->temp - 273.15);
 
 ?>
