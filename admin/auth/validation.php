@@ -1,15 +1,15 @@
 <?php
 
+  require('connection.php');
+
   if (!empty($_POST) AND (empty($_POST['usuario']) OR empty($_POST['senha']))) {
       header("Location: ../"); exit;
   }
 
-  $success = mysqli_connect("localhost", "root", "root", "english-portal") or trigger_error(mysql_error());
-
   $user = $_POST['usuario'];
   $password = $_POST['senha'];
 
-  $query = mysqli_query($success, "SELECT `id`, `name`, `level` FROM `users` WHERE `user` = '".$user ."' AND `password` = '". sha1($password) ."' AND `active` = 1 AND `level` = 2");
+  $query = mysqli_query($conn, "SELECT `id`, `name`, `level` FROM `users` WHERE `user` = '".$user ."' AND `password` = '". sha1($password) ."' AND `active` = 1 AND `level` = 2");
 
   if (mysqli_num_rows($query) != 1) {
 
