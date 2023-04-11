@@ -1,7 +1,7 @@
 <?php
   if (!isset($_SESSION)) session_start();
-  $nivel_necessario = 2;
-  if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] <$nivel_necessario)) {
+  $requiredLevel = 2;
+  if (!isset($_SESSION['UsuarioID']) OR ($_SESSION['UsuarioNivel'] <$requiredLevel)) {
       session_destroy();
       header("Location: ../"); exit;
   }
