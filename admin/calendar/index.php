@@ -37,11 +37,16 @@
             return `${year}-${month}-${day}`;
         }
 
-
        $(document).ready(function() {	
            	
             //CARREGA CALENDÁRIO E EVENTOS DO BANCO
             $('#calendario').fullCalendar({
+                theme: false,
+                eventClick: function(event) {
+                    window.open('https://us02web.zoom.us/j/4131437747?pwd=L0JtMkdvdVEyd3IvYzVwUG40aFRmUT09#success', 'page_open', 'width=700,height=600');
+                },
+                buttonIcons: true,
+				weekNumbers: false,
                 header: {
                     left: 'prev,next today',
                     center: 'title',
