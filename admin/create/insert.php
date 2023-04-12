@@ -14,8 +14,19 @@
   }
   
   echo "Connected successfully";
+
+  function gerarCorHexadecimal() {
+    $letras = '0123456789ABCDEF';
+    $cor = '#';
+    for ($i = 0; $i < 6; $i++) {
+      $cor .= $letras[rand(0, 15)];
+    }
+    return $cor;
+  }
+
+  $cor = gerarCorHexadecimal();
   
-  $sql = "INSERT INTO `users` VALUES (NULL, '$name', '$user', SHA1('$pass'), '$email', '$level', 1, NOW( ), NOW( ));";
+  $sql = "INSERT INTO `users` VALUES (NULL, '$name', '$user', SHA1('$pass'), '$cor', '$email', '$level', 1, NOW( ), NOW( ));";
 
   if (mysqli_query($conn, $sql)) {
         echo "<script>alert('New user created successfully');</script>";
