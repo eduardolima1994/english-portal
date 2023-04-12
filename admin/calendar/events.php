@@ -3,7 +3,7 @@
     require('../auth/session.php');
     require('../auth/connection.php');
 
-    $query = "SELECT c.id, c.title, c.date, u.user FROM calendar AS c INNER JOIN users AS u ON u.id = c.user_id";
+    $query = "SELECT c.id, c.date, UPPER(CONCAT(u.user, ' - ' , c.title)) AS title, u.color FROM calendar AS c INNER JOIN users AS u ON u.id = c.user_id;";
     $result = $conn->query($query);
 
     if ($result->num_rows > 0) {
