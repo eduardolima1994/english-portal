@@ -28,7 +28,7 @@ body {
   bottom: 0;
   right: 0;
   left: 0;
-  margin: 0 30px;
+  margin: 0 15px;
 }
 
 .top-bar-content {
@@ -36,19 +36,23 @@ body {
   margin: 0 auto;
   text-align: center;
   color: #fff;
-  background-color: aqua;
+  /* background-color: aqua; */
   margin-bottom: 2%;
-  padding: 30px 30px;
+  padding: 1px 1px;
 }
 
 /* Button */
+
+.text-box {
+  display: inline-block;
+}
 
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 15px 40px;
-  width: 40%;
+  width: 100%;
   display:flex;
   border-radius: 100px;
   transition: all .2s;
