@@ -116,10 +116,18 @@ body {
 /* Responsive */
 
 @media screen and (max-width: 768px) {
+  
   .imagem-adaptavel {
     max-width: 230%;
     position: fixed;
     bottom: 50;
     right: 50;
+    z-index: 0;
   }
+
+  .top-bar-container {
+    position: fixed;
+    z-index: 9999;
+  }
+
 }
