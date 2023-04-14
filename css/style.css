@@ -5,6 +5,7 @@
 
 body {
   font-family: sans-serif;
+  background-color: #d1e1e7;
 }
 
 /* Image */
@@ -109,5 +110,16 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+  .imagem-adaptavel {
+    max-width: 230%;
+    position: fixed;
+    bottom: 50;
+    right: 50;
   }
 }
