@@ -322,7 +322,7 @@
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
               <i class="icon-layout menu-icon"></i>
-              <span class="menu-title">Students</span>
+              <span class="menu-title">Users</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="ui-basic">
@@ -478,9 +478,9 @@
           <div class="col-lg-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Students</h4>
+                  <h4 class="card-title">Users</h4>
                   <p class="card-description">
-                    <a href="../create/create.php">Create student</a><code>.users</code>
+                    <a href="../create/create.php"><button type="button" class="btn btn-success btn-sm"><i class="mdi mdi-auto-fix"></i><br>Create user</button></a>
                   </p>
                   <div class="table-responsive">
                     <table class="table table-striped">
@@ -515,9 +515,9 @@
                             <td><?=$linha['email']?></td>
                             <td><?php
                               if($linha['level'] == 1){
-                                echo 'STUDENT';
+                                echo '<i class="mdi icon-md mdi-account text-danger"></i>';
                               }else{
-                                echo 'ADMIN';
+                                echo '<i class="mdi icon-md mdi-account-check text-success"></i>';
                               }
                             ?></td>
                             <!--
@@ -526,23 +526,27 @@
                             -->
                             <td>
                               <a href="../calendar/index.php?id=<?=$linha['id']?>">
-                                <button type="button" class="btn btn-outline-secondary btn-sm">Calendar</button>
+                                <button type="button" class="btn btn-success btn-sm"><i class="mdi mdi-calendar-today"></i><br>Calendar</button>
                               </a>
                             </td>
                             <td>
                               <a href="../update/update.php?id=<?=$linha['id']?>">
-                                <button type="button" class="btn btn-outline-secondary btn-sm">Alter</button>
+                                <button type="button" class="btn btn-success btn-sm"><i class="mdi mdi-lead-pencil"></i><br>Alter</button>
                               </a>
                             </td>
                             <td><?php
                               if($linha['level'] == 2){
-                                echo 'Unavailable';
+                                ?>
+                                  <a onclick="return confirm('Unable to delete student!');">
+                                    <button type="button" class="btn btn-outline-secondary btn-sm"><i class="mdi mdi-delete"></i><br>Delete</button>
+                                  </a>
+                                <?php
                               }else{
                                 ?>
-                                <a href="../delete/delete.php?id=<?=$linha['id']?>" onclick="return confirm('Do you really want to delete the student?');">
-                                  <button type="button" class="btn btn-primary btn-sm">Delete</button>
-                                </a>
-                              <?php
+                                  <a href="../delete/delete.php?id=<?=$linha['id']?>" onclick="return confirm('Do you really want to delete the student?');">
+                                    <button type="button" class="btn btn-primary btn-sm"><i class="mdi mdi-delete"></i><br>Delete</button>
+                                  </a>
+                                <?php
                               }
                             ?></td>
                           </tr>	
