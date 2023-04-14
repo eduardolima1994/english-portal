@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="restricted/vendors/ti-icons/css/themify-icons.css">
   <link rel="stylesheet" href="restricted/vendors/css/vendor.bundle.base.css">
   <link rel="stylesheet" href="restricted/css/vertical-layout-light/style.css">
-  <link rel="shortcut icon" href="restricted/images/favicon.ico" />
+  <link rel="shortcut icon" href="../images/favicon.ico" />
 </head>
 
 <body>

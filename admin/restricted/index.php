@@ -35,7 +35,7 @@
   <!-- inject:css -->
   <link rel="stylesheet" href="css/vertical-layout-light/style.css">
   <!-- endinject -->
-  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="shortcut icon" href="../../images/favicon.ico" />
 </head>
 <body>
 
