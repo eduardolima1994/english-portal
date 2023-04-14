@@ -11,6 +11,7 @@ body {
 /* Image */
 
 .imagem-adaptavel {
+  width: 100%;
   max-width: 100%;
   padding: 0%;
 }
@@ -118,6 +119,7 @@ body {
 @media screen and (max-width: 768px) {
   
   .imagem-adaptavel {
+    width: 220%;
     max-width: 230%;
     position: fixed;
     bottom: 50;
