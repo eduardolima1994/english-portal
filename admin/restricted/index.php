@@ -1,15 +1,13 @@
 <?php
 
   require('../auth/session.php');
+  require('../auth/connection.php');
   require('../temperature/temperature.php');
 
-?>
-
-<?php
-  $success = mysqli_connect("localhost", "root", "root", "english-portal") or trigger_error(mysql_error());
-  $dados = mysqli_query($success, "SELECT * FROM `users`") or die(mysqli_error());
+  $dados = mysqli_query($conn, "SELECT * FROM `users`") or die(mysqli_error());
   $linha = mysqli_fetch_assoc($dados);
   $total = mysqli_num_rows($dados);
+
 ?>
 
 <!DOCTYPE html>
@@ -421,7 +419,7 @@
                             }
                           ?>
                           
-                          <?=$temp?><sup>C</sup>
+                          <?=$temp?><sup>°C</sup>
                         </h2>
                       </div>
                       <div class="ml-2">
