@@ -14,12 +14,20 @@
             $array[] = $line;
         }
         foreach ($array as $item) {
+            echo "<h3>Class Management</h3>";
             echo "<p><b>Id:</b> " . $item['id'] . "</p>";
-            echo "<p><b>Date:</b> " . $item['date'] . "</p>";
+            
+            $dateTime = $item['date'];
+            $date = new DateTime($dateTime);
+            $dateTimeFormatted = $date->format('d/m/Y');
+            $formattedTime = $date->format('H:i:s');
+            
+            echo "<p><b>Date:</b> " . $dateTimeFormatted . "</p>";
+            echo "<p><b>Entry time:</b> " . $formattedTime . "</p>";
             echo "<p><b>User:</b> " . $item['user'] . "</p>";
             echo "<p><b>Title:</b> " . $item['title'] . "</p>";
             //echo "<p><b>Color:</b> " . $item['color'] . "</p>";
-            echo "<a href='deleteEvent.php?id=$id&idEvent=$idEvent'>Delete</a>";
+            echo "<a href='deleteEvent.php?id=$id&idEvent=$idEvent'><button type='button'>Delete</button></a>";
         }
     } else {
         echo "<p>No results found.</p>";
