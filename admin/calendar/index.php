@@ -90,7 +90,6 @@
     
 </head>
 <body>    
-    <a href="../restricted"><button> Back </button></a>
     <div id='calendario'>
         <br/>
         <form id="novo_evento" action="" method="post">
@@ -98,6 +97,7 @@
             Date event: <input type="datetime-local" name="date" required/><br/><br/>       
             <button type="submit"> Create new event </button>
         </form>
+        <a href="../restricted"><button> Back </button></a>
     </div>
 </body>
 </html>
