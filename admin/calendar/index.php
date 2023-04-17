@@ -9,7 +9,7 @@
 <head>
     <meta charset="utf-8">
     <meta lang="pt-BR">
-    <title>English Portal - Admin Area</title>
+    <title>English Portal - Admin Area - Welcome <?php echo $_SESSION['UsuarioNome']; ?>!</title>
     
     <link rel='stylesheet' href='fullcalendar/fullcalendar.css' />
     <script src='fullcalendar/lib/jquery.min.js'></script>
@@ -17,10 +17,6 @@
     <script src='fullcalendar/fullcalendar.js'></script>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../restricted/vendors/feather/feather.css">
-    <link rel="stylesheet" href="../restricted/vendors/ti-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="../restricted/vendors/css/vendor.bundle.base.css">
-    <link rel="stylesheet" href="../restricted/css/vertical-layout-light/style.css">
     <link rel="shortcut icon" href="../../images/favicon.ico" />
     
     <!-- script de tradução -->
@@ -43,7 +39,7 @@
             $('#calendario').fullCalendar({
                 theme: false,
                 eventClick: function(event) {
-                    window.open('https://us02web.zoom.us/j/4131437747?pwd=L0JtMkdvdVEyd3IvYzVwUG40aFRmUT09#success', 'page_open', 'width=700,height=600');
+                    window.open(`selectEvent.php?id=<?=$id?>&idEvent=${event.id}`, 'page_open', 'width=700,height=600');
                 },
                 buttonIcons: true,
 				weekNumbers: false,
@@ -94,7 +90,7 @@
     
 </head>
 <body>    
-    <a href="../restricted">Voltar</a>
+    <a href="../restricted"><button> Back </button></a>
     <div id='calendario'>
         <br/>
         <form id="novo_evento" action="" method="post">
