@@ -4,6 +4,16 @@
  * (c) 2015 Adam Shaw
  */
 
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #1F1F1F;
+	text-align: left;
+	background-color: #fff;
+}
 
 .fc {
 	direction: ltr;
@@ -32,6 +42,10 @@ body .fc { /* extra precedence to overcome jqui */
 	border-color: #ddd;
 }
 
+.fc-head {
+	background-color: #f4f5f7;
+}
+
 .fc-unthemed .fc-popover {
 	background-color: #fff;
 }
@@ -46,7 +60,7 @@ body .fc { /* extra precedence to overcome jqui */
 }
 
 .fc-unthemed .fc-today {
-	background: #fcf8e3;
+	background: #f4f5f7;
 }
 
 .fc-highlight { /* when user is selecting cells */
@@ -340,7 +354,7 @@ hr.fc-divider {
 	height: 0;
 	margin: 0;
 	padding: 0 0 2px; /* height is unreliable across browsers, so use padding */
-	border-width: 1px 0;
+	border-width: 10px 0;
 }
 
 .fc-clear {
@@ -385,7 +399,7 @@ hr.fc-divider {
 .fc th,
 .fc td {
 	border-style: solid;
-	border-width: 1px;
+	border-width: 3px;
 	padding: 0;
 	vertical-align: top;
 }
