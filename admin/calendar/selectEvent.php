@@ -28,6 +28,7 @@
             echo "<p><b>Title:</b> " . $item['title'] . "</p>";
             //echo "<p><b>Color:</b> " . $item['color'] . "</p>";
             echo "<a href='deleteEvent.php?id=$id&idEvent=$idEvent'><button type='button'>Delete</button></a>";
+            echo "<a href='https://us02web.zoom.us/j/4131437747?pwd=L0JtMkdvdVEyd3IvYzVwUG40aFRmUT09#success'><button type='button'>Meeting</button></a>";
         }
     } else {
         echo "<p>No results found.</p>";
