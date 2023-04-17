@@ -75,12 +75,13 @@
                   </div>
                 </div>
                 <div class="preview-item-content">
-                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                  <h6 class="preview-subject font-weight-normal">Welcome to the English Portal!</h6>
                   <p class="font-weight-light small-text mb-0 text-muted">
-                    Just now
+                    You bilingual is our main goal!
                   </p>
-                </div>
+                </div>              
               </a>
+              <!--
               <a class="dropdown-item preview-item">
                 <div class="preview-thumbnail">
                   <div class="preview-icon bg-warning">
@@ -107,6 +108,7 @@
                   </p>
                 </div>
               </a>
+              -->
             </div>
           </li>
           <li class="nav-item nav-profile dropdown">
