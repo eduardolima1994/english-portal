@@ -16,7 +16,7 @@
     } else {
         $script = "<script>";
         $script .= "window.close();";
-        $script .= "window.opener.location.href = './index.php?id=$id';";
+        $script .= "window.opener.location.href = './calendar.php?id=$id';";
         $script .= "</script>";
 
         echo $script;
